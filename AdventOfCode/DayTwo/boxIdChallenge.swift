@@ -54,3 +54,23 @@ func getRudimentaryCheckSum() {
     print("Rudimentary checksum: \(rudimentaryCheckSum)")
 }
 
+func findCorrectProduct() {
+    guard let boxIds = getBoxIdInput() else {
+        return
+    }
+    
+    for boxId in boxIds {
+        let difference = boxIds.filter({ zip(boxId, $0).filter({ $0 != $1 }).count == 1 })
+        if difference.count == 1 {
+            var productId = ""
+            for characterLocation in 0..<boxId.count {
+                let index = boxId.index(boxId.startIndex, offsetBy: characterLocation)
+                if boxId[index] == difference.first![index] {
+                    productId.append(boxId[index])
+                }
+            }
+            print("Box ID: \(productId)")
+            break
+        }
+    }
+}

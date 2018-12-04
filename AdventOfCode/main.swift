@@ -52,11 +52,13 @@ while continueProgram {
             if partOfDay == "1" {
                 getRudimentaryCheckSum()
             } else if partOfDay == "2" {
-                print("Challenge pending")
+                findCorrectProduct()
             }
         }
     case "2.1":
         getRudimentaryCheckSum()
+    case "2.2":
+        findCorrectProduct()
     case "q", "Q":
         continueProgram = false
     default:
