@@ -3,4 +3,4 @@ project(2020)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(2020 main.cpp dayOne.h fileExtensions.h dayTwo.h stringExtensions.h dayThree.h)
+add_executable(2020 main.cpp dayOne.h fileExtensions.h dayTwo.h stringExtensions.h dayThree.h dayFour.h AdventOfCode.h)

@@ -9,6 +9,7 @@
 
 #include "fileExtensions.h"
 #include "stringExtensions.h"
+#include "AdventOfCode.h"
 
 namespace AdventOfCode2020 {
     struct Range {
@@ -64,11 +65,6 @@ namespace AdventOfCode2020 {
 
         return passwordHandlers;
     }
-
-    enum DayPart {
-        One,
-        Two
-    };
 
     string dayTwo(const string& fileName, const DayPart& dayPart) {
         auto passwordHandlers = convertToPasswordHandlers(readLines(fileName));

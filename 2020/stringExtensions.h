@@ -24,6 +24,13 @@ namespace AdventOfCode2020 {
 
         return result;
     }
+    string eraseAll(string original, const string& toRemove) {
+        size_t position;
+        while ((position = original.find(toRemove)) != string::npos) {
+            original.erase(position, toRemove.size());
+        }
+        return original;
+    }
 
     vector<string> split(string const &original, char delimiter) {
         vector<string> tokens;
