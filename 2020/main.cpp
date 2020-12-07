@@ -3,6 +3,8 @@
 #include "dayTwo.h"
 #include "dayThree.h"
 #include "dayFour.h"
+#include "dayFive.h"
+#include "daySix.h"
 
 using namespace std;
 using namespace AdventOfCode2020;
@@ -35,6 +37,20 @@ int main() {
     if (inputPath != "s") {
         cout << "Answer Day 4 Part 1: " << dayFourPartOne(inputPath, DayPart::One) <<  endl;
         cout << "Answer Day 4 Part 2: " << dayFourPartOne(inputPath, DayPart::Two) <<  endl;
+    }
+
+    cout << "Path to Day 5 input:" << endl;
+    cin >> inputPath;
+    if (inputPath != "s") {
+        cout << "Answer Day 5 Part 1: " << dayFive(inputPath, DayPart::One) <<  endl;
+        cout << "Answer Day 5 Part 2: " << dayFive(inputPath, DayPart::Two) <<  endl;
+    }
+
+    cout << "Path to Day 6 input:" << endl;
+    cin >> inputPath;
+    if (inputPath != "s") {
+        cout << "Answer Day 6 Part 1: " << daySix(inputPath, DayPart::One) <<  endl;
+        cout << "Answer Day 6 Part 2: " << daySix(inputPath, DayPart::Two) << endl;
     }
     return 0;
 }
