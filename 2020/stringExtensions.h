@@ -43,6 +43,20 @@ namespace AdventOfCode2020 {
         return tokens;
     }
 
+    vector<string> split(const string& original, const string& delimiter) {
+        vector<string> tokens;
+        string token;
+        size_t last = 0;
+        size_t next = 0;
+        while ((next = original.find(delimiter, last)) != string::npos) {
+            tokens.push_back(original.substr(last, next-last));
+            last = next + delimiter.size();
+        }
+        tokens.push_back(original.substr(last));
+
+        return tokens;
+    }
+
     int occurrencesOf(string const& original, char charToCount) {
         int occurrences = 0;
         for (auto const& character : original) {

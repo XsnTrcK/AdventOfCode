@@ -5,6 +5,7 @@
 #include "dayFour.h"
 #include "dayFive.h"
 #include "daySix.h"
+#include "daySeven.h"
 
 using namespace std;
 using namespace AdventOfCode2020;
@@ -51,6 +52,13 @@ int main() {
     if (inputPath != "s") {
         cout << "Answer Day 6 Part 1: " << daySix(inputPath, DayPart::One) <<  endl;
         cout << "Answer Day 6 Part 2: " << daySix(inputPath, DayPart::Two) << endl;
+    }
+
+    cout << "Path to Day 7 input:" << endl;
+    cin >> inputPath;
+    if (inputPath != "s") {
+        cout << "Answer Day 7 Part 1: " << daySeven(inputPath, DayPart::One) <<  endl;
+        cout << "Answer Day 7 Part 2: " << daySeven(inputPath, DayPart::Two) << endl;
     }
     return 0;
 }
